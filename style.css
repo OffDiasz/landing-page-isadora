@@ -1,0 +1,170 @@
+/* Reset básico para uma base limpa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão, pode mudar */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: #a30000; /* Um vermelho/vinho para o cabeçalho */
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.2em;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Estilos da Seção de Mensagem de Introdução e Futuro */
+.intro-message, .future-message {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.intro-message h2, .future-message h2 {
+    color: #a30000;
+    margin-bottom: 1em;
+}
+
+.intro-message p, .future-message p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Estilos da Galeria de Fotos */
+.photo-gallery {
+    display: grid; /* Usando Grid para o layout das fotos */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas flexíveis */
+    gap: 20px; /* Espaço entre as fotos */
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 20px;
+}
+
+.photo-gallery h2 {
+    grid-column: 1 / -1; /* Título ocupa todas as colunas */
+    text-align: center;
+    color: #a30000;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.photo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden; /* Garante que a imagem não vaze */
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Efeito ao passar o mouse */
+}
+
+.photo-card:hover {
+    transform: translateY(-5px); /* Levanta um pouco o card no hover */
+}
+
+.photo-card img {
+    width: 100%;
+    height: 300px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Recorta a imagem para cobrir o espaço sem distorcer */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    border-bottom: 1px solid #eee;
+}
+
+.photo-card h3 {
+    color: #a30000;
+    margin: 1em 0.5em 0.5em;
+    font-size: 1.4em;
+}
+
+.photo-card p {
+    padding: 0 1em 1.5em;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Estilos para o contêiner do botão (NOVO) */
+.button-wrapper {
+    text-align: center; /* Centraliza o conteúdo inline/inline-block como o botão */
+    margin: 3em auto; /* Adiciona margem acima/abaixo e centraliza o bloco */
+    padding: 1em; /* Um pouco de padding para espaçamento */
+    max-width: 800px; /* Limita a largura do container para que o margin:auto funcione */
+}
+
+#btnSurpresa {
+    /* Estilos do botão */
+    background-color: #800000; /* Cor vinho */
+    color: white;              /* Cor do texto do botão */
+    padding: 15px 30px;        /* Espaçamento interno */
+    border: none;              /* Remove a borda padrão */
+    border-radius: 8px;        /* Bordas arredondadas */
+    font-size: 20px;           /* Tamanho da fonte */
+    cursor: pointer;           /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+#btnSurpresa:hover {
+    /* Efeito ao passar o mouse */
+    background-color: #6a0000; /* Um tom um pouco mais escuro de vinho */
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 3em;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 0.5em;
+}
+
+/* Responsividade básica para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .intro-message, .future-message {
+        margin: 1.5em auto;
+        padding: 1.5em;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+        padding: 15px;
+    }
+
+    .photo-card img {
+        height: 250px; /* Ajusta a altura da imagem para telas menores */
+    }
+}
