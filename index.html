@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Uma pequena surpresa para minha princesa 🍒</h1>
+        <h1>Uma pequena surpresa para minha princesa</h1>
     </header>
 
     <main>
@@ -19,6 +19,27 @@
             </p>
         </section>
 
+        <section class="time-together">
+            <h2>Tempo que estamos juntos ❤️</h2>
+            <div id="countdown">
+                <div class="time-unit">
+                    <span id="years"></span>
+                    <label>Anos</label>
+                </div>
+                <div class="time-unit">
+                    <span id="days"></span>
+                    <label>Dias</label>
+                </div>
+                <div class="time-unit">
+                    <span id="hours"></span>
+                    <label>Horas</label>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes"></span>
+                    <label>Minutos</label>
+                </div>
+            </div>
+        </section>
         <section class="photo-gallery">
             <div class="photo-card">
                 <img src="anonovo.JPG" alt="Nosso primeiro ano novo">
@@ -102,6 +123,212 @@
             // Mostra a mensagem de alerta
             alert('Parabéns, meu amor, você ganhou um vale anel solitário! Basta me dar um beijinho para ganhar!🎉');
         });
+
+        // NOVO: Script do contador de tempo
+        const startDate = new Date('2024-02-01T00:00:00'); // 1º de fevereiro de 2024, 00:00:00
+        
+        function updateTimeTogether() {
+            const now = new Date();
+            const diff = now - startDate; // Diferença em milissegundos
+
+            // Cálculos para anos, dias, horas e minutos
+            const years = now.getFullYear() - startDate.getFullYear(); // Approximate years
+            const msInYear = 1000 * 60 * 60 * 24 * 365.25; // Average milliseconds in a year (accounting for leap years)
+            
+            let remainingMs = diff;
+
+            // Calculate exact years, then subtract from remainingMs to get the days, hours, and minutes for the current year.
+            const yearsTogether = Math.floor(remainingMs / msInYear);
+            remainingMs -= yearsTogether * msInYear;
+
+            const days = Math.floor(remainingMs / (1000 * 60 * 60 * 24));
+            remainingMs %= (1000 * 60 * 60 * 24);
+
+            const hours = Math.floor(remainingMs / (1000 * 60 * 60));
+            remainingMs %= (1000 * 60 * 60);
+
+            const minutes = Math.floor(remainingMs / (1000 * 60));
+
+            document.getElementById('years').innerText = yearsTogether;
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+        }
+
+        // Atualiza o contador a cada minuto
+        setInterval(updateTimeTogether, 60000); 
+        // Chama a função uma vez para exibir o tempo imediatamente ao carregar a página
+        updateTimeTogether(); 
+        // FIM: Script do contador de tempo
+    </script>
+
+    <footer>
+        <p>Feito com todo amor pelo seu amor ❤️</p>
+        <p>Copyright &copy; 2025</p>
+    </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Meu bem 🍒</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Uma pequena surpresa para minha princesa</h1>
+    </header>
+
+    <main>
+        <section class="intro-message">
+            <h2>Nossos Momentos Inesquecíveis na minha visão👀</h2>
+            <p>
+                 
+            </p>
+        </section>
+
+        <section class="time-together">
+            <h2>Tempo que estamos juntos ❤️</h2>
+            <div id="countdown">
+                <div class="time-unit">
+                    <span id="years"></span>
+                    <label>Anos</label>
+                </div>
+                <div class="time-unit">
+                    <span id="days"></span>
+                    <label>Dias</label>
+                </div>
+                <div class="time-unit">
+                    <span id="hours"></span>
+                    <label>Horas</label>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes"></span>
+                    <label>Minutos</label>
+                </div>
+            </div>
+        </section>
+        <section class="photo-gallery">
+            <div class="photo-card">
+                <img src="anonovo.JPG" alt="Nosso primeiro ano novo">
+                <h3>Nosso primeiro ano novo</h3>
+                <p>Lembro que tudo parecia uma bagunça naquele dia, mas eu não estava nem aí. 
+                    Eu só me importava em estar com você. E, nossa senhora, o quão maravilhosa você 
+                    estava naquele dia não sai da minha mente.
+                </p>
+            </div>
+
+            <div class="photo-card">
+                <img src="guappark.jpg" alt="Conhecendo fefe">
+                <h3>Dia em que você conheceu minha mãe</h3>
+                <p>
+                    Esse dia foi marcante para mim, pois foi quando você conheceu a minha mãe. 
+                    Você não faz ideia do quanto eu esperei por esse encontro: as duas mulheres da minha vida.
+                </p>
+            </div>
+
+            <div class="photo-card">
+                <img src="feirasc.jpg" alt="Feira de sao cristovao">
+                <h3>O dia que fomos para São Cristovão</h3>
+                <p>
+                    Esse dia, além de você conhecer a louca que eu tenho como referência feminina, 
+                    também me lembra de você toda feliz papando cuscuz. Eu amo muito essa foto.
+                </p>
+            </div>
+            <div class="photo-card">
+                <img src="brasilia.jpg" alt="Mulher sorrindo com uma pizza">
+                <h3>O final de semana que fomos para Brasília</h3>
+                <p>
+                    Quando você aceitou a loucura de ir para outro estado comigo. Eu agradeço demais
+                    por você ter ido comigo, sua companhia é sempre a melhor de todo mundo, você torna tudo muito
+                    mais divertido.
+                </p>
+            </div>
+
+            <div class="photo-card">
+                <img src="natal2024.jpg" alt="Casal em um elevador tirando uma selfie">
+                <h3>Nosso primeiro natal juntos</h3>
+                <p>
+                    Quando dissemos que passaríamos o Natal do ano seguinte juntos, não era brincadeira
+                    e mantivemos a promessa. Eu amei passar esse feriado, que eu costumava passar sozinho, com alguém que dá sentido à minha vida.
+                </p>
+            </div>
+
+            <div class="photo-card">
+                <img src="niver1ano.jpg" alt="Mulher comendo algo em um mercado noturno">
+                <h3>Nosso aniversário de um ano</h3>
+                <p>
+                    O dia em que comemoramos nosso primeiro aninho juntos… E te falar: o que mais me marcou nesse dia, 
+                    além da comemoração em si, foi você. Nossa, essa foto sua me deixa deslumbrado, e foi exatamente assim 
+                    que me senti ao te ver arrumada para sair comigo.
+                </p>
+            </div>
+        </section>
+
+        <section class="future-message">
+            <h2>Memórias que ainda vão florescer </h2>
+            <p>
+                <strong>O nome Isadora significa "presente de Ísis" ou "dádiva de Ísis". 
+                Ísis era uma deusa egípcia associada à maternidade, fertilidade e magia. </strong> 
+                Pensar no seu nome me faz lembrar da nossa conversa de outro dia, sobre nossas futuras crias. 
+                Pensar que ainda vamos ter um longo caminho juntos me dá um conforto absurdo no coração. Saber 
+                que vou poder acordar e ver você louca pra tomar seu café, ver as crianças fazendo uma zona na casa... 
+                não vejo a hora dessa nossa fase chegar. Mas, enquanto ela não vem, ainda vou ter você todinha pra mim por um tempinho.
+            </p>
+        </section>
+    </main>
+    
+    <div class="button-wrapper">
+        <button id="btnSurpresa">Surpresa</button>
+    </div>
+
+    <script>
+        // Seleciona o botão pelo ID
+        const botao = document.getElementById('btnSurpresa');
+
+        // Adiciona um "ouvinte" de evento para o clique
+        botao.addEventListener('click', function() {
+            // Mostra a mensagem de alerta
+            alert('Parabéns, meu amor, você ganhou um vale anel solitário! Basta me dar um beijinho para ganhar!🎉');
+        });
+
+        // NOVO: Script do contador de tempo
+        const startDate = new Date('2024-02-01T00:00:00'); // 1º de fevereiro de 2024, 00:00:00
+        
+        function updateTimeTogether() {
+            const now = new Date();
+            const diff = now - startDate; // Diferença em milissegundos
+
+            // Cálculos para anos, dias, horas e minutos
+            const years = now.getFullYear() - startDate.getFullYear(); // Approximate years
+            const msInYear = 1000 * 60 * 60 * 24 * 365.25; // Average milliseconds in a year (accounting for leap years)
+            
+            let remainingMs = diff;
+
+            // Calculate exact years, then subtract from remainingMs to get the days, hours, and minutes for the current year.
+            const yearsTogether = Math.floor(remainingMs / msInYear);
+            remainingMs -= yearsTogether * msInYear;
+
+            const days = Math.floor(remainingMs / (1000 * 60 * 60 * 24));
+            remainingMs %= (1000 * 60 * 60 * 24);
+
+            const hours = Math.floor(remainingMs / (1000 * 60 * 60));
+            remainingMs %= (1000 * 60 * 60);
+
+            const minutes = Math.floor(remainingMs / (1000 * 60));
+
+            document.getElementById('years').innerText = yearsTogether;
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+        }
+
+        // Atualiza o contador a cada minuto
+        setInterval(updateTimeTogether, 60000); 
+        // Chama a função uma vez para exibir o tempo imediatamente ao carregar a página
+        updateTimeTogether(); 
+        // FIM: Script do contador de tempo
     </script>
 
     <footer>
