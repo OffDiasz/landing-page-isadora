@@ -53,6 +53,48 @@ header p {
     line-height: 1.8;
 }
 
+/* NOVO: Estilos do Contador de Tempo */
+.time-together {
+    max-width: 800px;
+    margin: 3em auto; /* Adicione margem para separar da seção anterior */
+    padding: 2em;
+    background-color: #ffe0e0; /* Fundo mais claro para o contador */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.time-together h2 {
+    color: #a30000;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre as unidades de tempo */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5em; /* Tamanho do número */
+    font-weight: bold;
+    color: #800000; /* Cor mais escura para os números */
+}
+
+.time-unit label {
+    font-size: 0.5em; /* Tamanho do rótulo (Anos, Dias, etc.) */
+    font-weight: normal;
+    color: #555;
+    margin-top: 5px;
+}
+/* FIM: Estilos do Contador de Tempo */
+
+
 /* Estilos da Galeria de Fotos */
 .photo-gallery {
     display: grid; /* Usando Grid para o layout das fotos */
@@ -154,7 +196,7 @@ footer p {
         font-size: 1em;
     }
 
-    .intro-message, .future-message {
+    .intro-message, .future-message, .time-together { /* Inclua .time-together aqui */
         margin: 1.5em auto;
         padding: 1.5em;
     }
@@ -166,5 +208,13 @@ footer p {
 
     .photo-card img {
         height: 250px; /* Ajusta a altura da imagem para telas menores */
+    }
+
+    #countdown {
+        gap: 20px; /* Reduz o espaço em telas menores */
+    }
+
+    .time-unit {
+        font-size: 2em; /* Reduz o tamanho da fonte dos números em telas menores */
     }
 }
